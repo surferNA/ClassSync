@@ -2,16 +2,93 @@
 <html>
 <head>
     <title>Timetable</title>
-</head>
-<body style="font-family: Arial; background:#f5f6f8; margin:0;">
-    <div style="background:#111827;color:white;padding:18px;">
-        <h1>Timetable</h1>
-        <a href="index.html" style="color:white;">← Back</a>
-    </div>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f5f6f8;
+            margin: 0;
+        }
 
-    <div style="padding:24px;">
-        <h2>Your Schedule</h2>
-        <p>Here you will manage your daily study plan.</p>
-    </div>
+        header {
+            background: #111827;
+            color: white;
+            padding: 18px;
+        }
+
+        .container {
+            padding: 24px;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 12px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+        }
+
+        .item {
+            background: white;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Timetable</h1>
+    <a href="index.html" style="color:white;">← Back</a>
+</header>
+
+<div class="container">
+
+    <h2>Add Class</h2>
+
+    <input id="classInput" placeholder="Enter class (e.g. Maths 8AM)" />
+    <button onclick="addClass()">Add</button>
+
+    <div id="list"></div>
+
+</div>
+
+<script>
+function loadClasses() {
+    let data = JSON.parse(localStorage.getItem("classes") || "[]");
+    let list = document.getElementById("list");
+    list.innerHTML = "";
+
+    data.forEach((c, i) => {
+        let div = document.createElement("div");
+        div.className = "item";
+        div.innerText = c;
+        list.appendChild(div);
+    });
+}
+
+function addClass() {
+    let input = document.getElementById("classInput");
+    let data = JSON.parse(localStorage.getItem("classes") || "[]");
+
+    if (input.value.trim() === "") return;
+
+    data.push(input.value);
+    localStorage.setItem("classes", JSON.stringify(data));
+
+    input.value = "";
+    loadClasses();
+}
+
+loadClasses();
+</script>
+
 </body>
 </html>
