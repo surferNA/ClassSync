@@ -30,10 +30,6 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-        .card h2 {
-            margin-top: 0;
-        }
-
         button {
             padding: 10px 15px;
             border: none;
@@ -48,6 +44,7 @@
         }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -60,28 +57,46 @@
     <div class="card">
         <h2>Timetable</h2>
         <p>Manage your daily class schedule.</p>
-        <button>Open</button>
+        <button onclick="openTimetable()">Open</button>
     </div>
 
     <div class="card">
         <h2>Assignments</h2>
         <p>Track homework and submissions.</p>
-        <button>View</button>
+        <button onclick="openAssignments()">View</button>
     </div>
 
     <div class="card">
         <h2>Revision Tracker</h2>
         <p>Track what you've revised.</p>
-        <button>Start</button>
+        <button onclick="openRevision()">Start</button>
     </div>
 
     <div class="card">
         <h2>Performance</h2>
         <p>Analyze your progress.</p>
-        <button>Check</button>
+        <button onclick="openPerformance()">Check</button>
     </div>
 
 </div>
+
+<script>
+function openTimetable() {
+    alert("Timetable feature coming soon!");
+}
+
+function openAssignments() {
+    alert("Assignments tracker coming soon!");
+}
+
+function openRevision() {
+    alert("Revision tracker coming soon!");
+}
+
+function openPerformance() {
+    alert("Performance analytics coming soon!");
+}
+</script>
 
 </body>
 </html>
