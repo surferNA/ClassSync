@@ -1,21 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ClassSync</title>
+    <title>ClassSync Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f8;
+        }
+
+        header {
+            background: #1f2937;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background: #2563eb;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+    </style>
 </head>
 <body>
+
+<header>
     <h1>ClassSync Dashboard</h1>
+    <p>Your personal study control center</p>
+</header>
 
-    <p>Welcome. This is your study control center.</p>
+<div class="container">
 
-    <h2>Features</h2>
-    <ul>
-        <li>Timetable</li>
-        <li>Assignments</li>
-        <li>Revision Tracker</li>
-        <li>Performance Analytics</li>
-    </ul>
+    <div class="card">
+        <h2>Timetable</h2>
+        <p>Manage your daily class schedule.</p>
+        <button>Open</button>
+    </div>
 
-    <button>Start Planning</button>
+    <div class="card">
+        <h2>Assignments</h2>
+        <p>Track homework and submissions.</p>
+        <button>View</button>
+    </div>
+
+    <div class="card">
+        <h2>Revision Tracker</h2>
+        <p>Track what you've revised.</p>
+        <button>Start</button>
+    </div>
+
+    <div class="card">
+        <h2>Performance</h2>
+        <p>Analyze your progress.</p>
+        <button>Check</button>
+    </div>
+
+</div>
+
 </body>
 </html>
