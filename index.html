@@ -17,30 +17,29 @@
         }
 
         .container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
             padding: 20px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            background: #2563eb;
+            padding: 8px 12px;
+            border-radius: 6px;
         }
 
         .card {
             background: white;
             padding: 20px;
+            margin-top: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        button {
-            padding: 10px 15px;
-            border: none;
-            background: #2563eb;
-            color: white;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #1d4ed8;
         }
     </style>
 </head>
@@ -49,54 +48,23 @@
 
 <header>
     <h1>ClassSync Dashboard</h1>
-    <p>Your personal study control center</p>
+    <p>Your study control center</p>
+
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="timetable.html">Timetable</a>
+        <a href="assignments.html">Assignments</a>
+    </div>
 </header>
 
 <div class="container">
 
     <div class="card">
-        <h2>Timetable</h2>
-        <p>Manage your daily class schedule.</p>
-        <button onclick="openTimetable()">Open</button>
-    </div>
-
-    <div class="card">
-        <h2>Assignments</h2>
-        <p>Track homework and submissions.</p>
-        <button onclick="openAssignments()">View</button>
-    </div>
-
-    <div class="card">
-        <h2>Revision Tracker</h2>
-        <p>Track what you've revised.</p>
-        <button onclick="openRevision()">Start</button>
-    </div>
-
-    <div class="card">
-        <h2>Performance</h2>
-        <p>Analyze your progress.</p>
-        <button onclick="openPerformance()">Check</button>
+        <h2>Welcome</h2>
+        <p>This is your central dashboard for managing studies.</p>
     </div>
 
 </div>
-
-<script>
-function openTimetable() {
-    alert("Timetable feature coming soon!");
-}
-
-function openAssignments() {
-    alert("Assignments tracker coming soon!");
-}
-
-function openRevision() {
-    alert("Revision tracker coming soon!");
-}
-
-function openPerformance() {
-    alert("Performance analytics coming soon!");
-}
-</script>
 
 </body>
 </html>
