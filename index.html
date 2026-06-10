@@ -1,45 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ClassSync Dashboard</title>
+    <title>ClassSync</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background: #f4f6f8;
+            font-family: Arial, sans-serif;
+            background: #f5f6f8;
         }
 
         header {
-            background: #1f2937;
+            background: #111827;
             color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .container {
-            padding: 20px;
+            padding: 18px 24px;
         }
 
         .nav {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
+            margin-top: 10px;
         }
 
         .nav a {
             color: white;
             text-decoration: none;
+            margin-right: 12px;
+            padding: 6px 10px;
             background: #2563eb;
-            padding: 8px 12px;
             border-radius: 6px;
+        }
+
+        .container {
+            padding: 24px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
         }
 
         .card {
             background: white;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #2563eb;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
         }
     </style>
 </head>
@@ -47,9 +68,7 @@
 <body>
 
 <header>
-    <h1>ClassSync Dashboard</h1>
-    <p>Your study control center</p>
-
+    <h1>ClassSync</h1>
     <div class="nav">
         <a href="index.html">Home</a>
         <a href="timetable.html">Timetable</a>
@@ -59,9 +78,34 @@
 
 <div class="container">
 
-    <div class="card">
-        <h2>Welcome</h2>
-        <p>This is your central dashboard for managing studies.</p>
+    <h2>Dashboard</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Timetable</h3>
+            <p>Manage your daily schedule efficiently.</p>
+            <a class="btn" href="timetable.html">Open</a>
+        </div>
+
+        <div class="card">
+            <h3>Assignments</h3>
+            <p>Track homework and submissions.</p>
+            <a class="btn" href="assignments.html">Open</a>
+        </div>
+
+        <div class="card">
+            <h3>Revision</h3>
+            <p>Track your revision progress.</p>
+            <a class="btn" href="#">Coming Soon</a>
+        </div>
+
+        <div class="card">
+            <h3>Performance</h3>
+            <p>Analyze your study performance.</p>
+            <a class="btn" href="#">Coming Soon</a>
+        </div>
+
     </div>
 
 </div>
